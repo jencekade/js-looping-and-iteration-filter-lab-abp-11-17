@@ -13,7 +13,7 @@ function findMatching(drivers, string) {
 function fuzzyMatch(drivers, string) {
   let fuzzyMatched = drivers.filter(function(drivers) {
     if (driver.slice(0, string.length) === string){
-      return string;
+      return driver;
     }
   });
   return fuzzyMatched;
