@@ -2,8 +2,8 @@
 
 
 function findMatching(drivers, string) {
-  let findMatched = drivers.filter(function (drivers){
-    if (drivers.toLowerCase() === string.toLowerCase()){
+  let findMatched = drivers.filter(function(drivers) {
+    if (drivers.toLowerCase() === string.toLowerCase()) {
       return string;
     }
   });
@@ -11,7 +11,12 @@ function findMatching(drivers, string) {
 }
 
 function fuzzyMatch(drivers, string) {
-
+  let fuzzyMatched = drivers.filter(function(drivers) {
+    if (driver.slice(0, string.length) === string){
+      return string;
+    }
+  });
+  return fuzzyMatched;
 
 }
 
