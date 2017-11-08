@@ -1,6 +1,5 @@
 // Code your solution in this file
 
-
 function findMatching(drivers, string) {
   let findMatched = drivers.filter(function(drivers) {
     if (drivers.toLowerCase() === string.toLowerCase()) {
@@ -17,10 +16,14 @@ function fuzzyMatch(drivers, string) {
     }
   });
   return fuzzyMatched;
-
 }
 
 
 function matchName(drivers, string) {
-
+  let matchedName = drivers.filter(function (driver) {
+    if (drivers.name === string) {
+      return string;
+    }
+  });
+  return matchedName;
 }
